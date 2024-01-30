@@ -1,0 +1,16 @@
+plugin "beancount.plugins.auto_accounts"
+include "Alice/ledger.bean"
+include "Bob/ledger.bean"
+include "Carol/ledger.bean"
+include "David/ledger.bean"
+include "Edward/ledger.bean"
+include "team/ledger.bean"
+option "operating_currency" "USD"
+
+
+2024-01-01 commodity PTS
+  name: "Poker Traner Shares"
+  asset-class: "stock"
+
+
+;; 2099-01-28 balance Equity:Profity:PT:Shares     -100 PTS

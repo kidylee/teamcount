@@ -1,0 +1,37 @@
+option "title" "BoA Account Team"
+plugin "beancount.plugins.auto_accounts"
+
+option "operating_currency" "USD"
+
+
+2024-01-05 * "Income from Apple"
+  Income:Apple:ProductA                         -500 USD
+  Assets:US:BofA:Joint:Team                      500 USD
+
+2024-01-06 balance Assets:US:BofA:Joint:Team     500 USD
+2024-01-06 balance Assets:US                    5500 USD
+
+2024-01-15 * "Team" "Borrow Money From Personal"
+  Liabilities:Team:Payable:Personal               -99 USD
+  Assets:US:BofA:Joint:Team                       99 USD
+
+2024-01-15 * "Apple" "Purchase Apple Developer License"
+  Assets:US:BofA:Joint:Team                      -99 USD
+  Expenses:Apple:License                          99 USD
+
+2024-01-16 balance Assets:US:BofA:Joint:Team     500 USD
+
+2024-01-20 * "Personal" "Pay Back Borrowed Money"
+  Assets:US:BofA:Joint:Team                      -99 USD
+  Liabilities:Team:Payable:Personal                99 USD
+
+2024-01-21 balance Assets:US:BofA:Joint:Team     401 USD
+
+
+;; ;; 2024-01-07 balance Liabilities:Profity:Payable:LA  0 USD
+
+;; ;; 2024-01-07 balance Assets:US:BofA:Joint:Profity  401 USD
+
+;; 2024-01-08 * "Pay dividend"
+;;   Expenses:Salary:PT                              400 USD
+;;   Assets:US:BofA:Joint:Profity                  -400 USD

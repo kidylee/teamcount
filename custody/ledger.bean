@@ -1,0 +1,22 @@
+option "title" "BoA parent ledger"
+option "operating_currency" "USD"
+plugin "beancount.plugins.auto_accounts"
+
+
+include "personal.bean"
+include "team.bean"
+
+
+;; Initial account for both team and myself.
+2024-01-01 * "Initial Account"
+  Assets:US:BofA:Joint:Personal               5000.00 USD
+  Assets:US:BofA:Joint:Team                        0 USD
+  Equity:Opening-Balances
+
+
+;;Assert each account
+2024-01-02 balance Assets:US:BofA:Joint:Team       0 USD
+2024-01-02 balance Assets:US:BofA:Joint:Personal  5000 USD
+
+;; Assert entire amount of BofA
+2024-01-02 balance Assets:US:BofA            5000.00 USD

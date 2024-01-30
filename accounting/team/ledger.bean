@@ -1,0 +1,13 @@
+plugin "beancount.plugins.auto_accounts"
+option "operating_currency" "SHARE"
+
+
+2024-01-25 * "Send Salary to Team members"
+  Assets:US:BofA:Joint:Team                     -400 USD
+  Expenses:Salary:Alice                           80 USD
+  Expenses:Salary:BoB                             80 USD
+  Expenses:Salary:Carol                           80 USD
+  Expenses:Salary:David                           80 USD
+  Expenses:Salary:Edward                          80 USD ;My alias name in the team
+
+2024-01-31 balance Assets:US:BofA:Joint:Team     381 USD

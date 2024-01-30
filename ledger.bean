@@ -1,0 +1,9 @@
+plugin "beancount.plugins.auto_accounts"
+plugin "beancount.plugins.mark_unverified"
+
+include "custody/ledger.bean"
+include "accounting/ledger.bean"
+include "shares.bean"
+
+
+2024-01-30 balance Equity:Team:Share            -100 SHARE

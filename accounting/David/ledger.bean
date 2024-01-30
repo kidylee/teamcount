@@ -1,0 +1,10 @@
+plugin "beancount.plugins.auto_accounts"
+option "operating_currency" "SHARE"
+
+2024-01-01 * "Alice" "Team Share"
+  Assets:US:BofA:Joint:Team:David                   20 SHARE
+  Equity:Team:Share
+
+2024-01-25 * "Salary"
+  Assets:US:BofA:Joint:Team:David                 80 USD
+  Income:Salary:Team                             -80 USD

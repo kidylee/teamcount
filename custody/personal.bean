@@ -1,0 +1,33 @@
+option "title" "BoA Account Personal Part"
+plugin "beancount.plugins.auto_accounts"
+
+option "operating_currency" "USD"
+
+
+
+;; Purchase netflix
+2024-01-10 * "Netflex" "Purchase Subscription"
+  Assets:US:BofA:Joint:Personal                  -9.9 USD
+  Expenses:Netflex                               9.9 USD
+
+2024-01-11 balance Assets:US:BofA:Joint:Personal  4990.1 USD
+2024-01-11 balance Assets:US:BofA             5490.1 USD
+
+
+
+2024-01-15 * "Team" "Lend Money to Team"
+  Assets:Personal:Receivables:Team              99 USD
+  Assets:US:BofA:Joint:Personal                   -99 USD
+
+2024-01-16 balance Assets:US:BofA:Joint:Personal  4891.1 USD
+
+
+
+;; ;; 2024-01-06 balance Assets:US:BofA            7039.30 USD
+
+2024-01-20 * "LA" "Received Lend Money"
+  Assets:Personal:Receivables:Team                -99 USD
+  Assets:US:BofA:Joint:Personal                    99 USD
+
+2024-01-21 balance Assets:US:BofA            5391.10 USD
+2024-01-21 balance Assets:US:BofA:Joint:Personal  4990.10 USD

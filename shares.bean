@@ -1,0 +1,5 @@
+plugin "beancount.plugins.auto_accounts"
+option "operating_currency" "USD"
+
+2024-01-01 commodity SHARE
+  name: "Team Shares"
